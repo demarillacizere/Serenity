@@ -1,3 +1,3 @@
-# Mental Health App
+# Serenity
 
-A mental health platform aimed at improving accessibility of the services in Rwanda.
+This one is for everyone.
