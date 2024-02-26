@@ -1,8 +1,17 @@
 from rest_framework import generics
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework.reverse import reverse
 from django.contrib.auth.models import User
 from .models import Profile, Professional, Speciality, Appointment, Post, Comment, Message, Resource, Availability
 from .serializers import UserSerializer, ProfileSerializer, ProfessionalSerializer, SpecialitySerializer, AppointmentSerializer, PostSerializer, CommentSerializer, MessageSerializer, ResourceSerializer, AvailabilitySerializer
 
+@api_view(['GET'])
+def api_root(request, format=None):
+    return Response({
+        'users': reverse('user-list', request=request, format=format),
+        'profiles': reverse('profile-list', request=request, format=format)
+    })
 class UserList(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
