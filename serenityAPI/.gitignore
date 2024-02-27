@@ -1,0 +1,6 @@
+env/
+
+*.pyc
+.env
+*/__pycache__/*
+commented-out-code.py

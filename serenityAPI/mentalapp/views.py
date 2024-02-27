@@ -1,10 +1,12 @@
-from rest_framework import generics
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
+from rest_framework import permissions
+from rest_framework import viewsets
 from django.contrib.auth.models import User
 from .models import Profile, Professional, Speciality, Appointment, Post, Comment, Message, Resource, Availability
 from .serializers import UserSerializer, ProfileSerializer, ProfessionalSerializer, SpecialitySerializer, AppointmentSerializer, PostSerializer, CommentSerializer, MessageSerializer, ResourceSerializer, AvailabilitySerializer
+
 
 @api_view(['GET'])
 def api_root(request, format=None):
@@ -12,139 +14,106 @@ def api_root(request, format=None):
         'users': reverse('user-list', request=request, format=format),
         'profiles': reverse('profile-list', request=request, format=format)
     })
-class UserList(generics.ListAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
 
 
-class UserDetail(generics.RetrieveAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-class ProfileList(generics.ListCreateAPIView):
+class UserViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows profiles to be viewed or created.
+    This ViewSet automatically provides `list`, `create`, `retrieve`,
+    `update` and `destroy` actions.
+    """
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
+class ProfileViewSet(viewsets.ModelViewSet):
+    """
+    Profile ViewSet
     """
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 
-class ProfileDetail(generics.RetrieveUpdateDestroyAPIView):
-    """
-    API endpoint that allows a profile to be retrieved, updated, or deleted.
-    """
-    queryset = Profile.objects.all()
-    serializer_class = ProfileSerializer
 
-class ProfessionalList(generics.ListCreateAPIView):
+class ProfessionalViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows professionals to be viewed or created.
+    Professional ViewSet
     """
     queryset = Professional.objects.all()
     serializer_class = ProfessionalSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
-class ProfessionalDetail(generics.RetrieveUpdateDestroyAPIView):
-    """
-    API endpoint that allows a professional to be retrieved, updated, or deleted.
-    """
-    queryset = Professional.objects.all()
-    serializer_class = ProfessionalSerializer
 
-class SpecialityList(generics.ListCreateAPIView):
+class SpecialityViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows specialities to be viewed or created.
+    Speciality ViewSet
     """
     queryset = Speciality.objects.all()
     serializer_class = SpecialitySerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
-class SpecialityDetail(generics.RetrieveUpdateDestroyAPIView):
-    """
-    API endpoint that allows a speciality to be retrieved, updated, or deleted.
-    """
-    queryset = Speciality.objects.all()
-    serializer_class = SpecialitySerializer
 
-class AppointmentList(generics.ListCreateAPIView):
+class AppointmentViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows appointments to be viewed or created.
+    Appointment ViewSet
     """
     queryset = Appointment.objects.all()
     serializer_class = AppointmentSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
 
-class AppointmentDetail(generics.RetrieveUpdateDestroyAPIView):
-    """
-    API endpoint that allows an appointment to be retrieved, updated, or deleted.
-    """
-    queryset = Appointment.objects.all()
-    serializer_class = AppointmentSerializer
 
-class PostList(generics.ListCreateAPIView):
+class PostViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows posts to be viewed or created.
+    Profile ViewSet
     """
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
-class PostDetail(generics.RetrieveUpdateDestroyAPIView):
-    """
-    API endpoint that allows a post to be retrieved, updated, or deleted.
-    """
-    queryset = Post.objects.all()
-    serializer_class = PostSerializer
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
 
-class CommentList(generics.ListCreateAPIView):
+
+class CommentViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows comments to be viewed or created.
+    Comment ViewSet
     """
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
 
-class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
-    """
-    API endpoint that allows a comment to be retrieved, updated, or deleted.
-    """
-    queryset = Comment.objects.all()
-    serializer_class = CommentSerializer
 
-class MessageList(generics.ListCreateAPIView):
+class MessageViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows messages to be viewed or created.
+    Message ViewSet
     """
     queryset = Message.objects.all()
     serializer_class = MessageSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    def perform_create(self, serializer):
+        serializer.save(sender=self.request.user)
 
-class MessageDetail(generics.RetrieveUpdateDestroyAPIView):
-    """
-    API endpoint that allows a message to be retrieved, updated, or deleted.
-    """
-    queryset = Message.objects.all()
-    serializer_class = MessageSerializer
 
-class ResourceList(generics.ListCreateAPIView):
+class ResourceViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows resources to be viewed or created.
+    Resource ViewSet
     """
     queryset = Resource.objects.all()
     serializer_class = ResourceSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
-class ResourceDetail(generics.RetrieveUpdateDestroyAPIView):
-    """
-    API endpoint that allows a resource to be retrieved, updated, or deleted.
-    """
-    queryset = Resource.objects.all()
-    serializer_class = ResourceSerializer
 
-class AvailabilityList(generics.ListCreateAPIView):
+class AvailabilityViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows availabilities to be viewed or created.
+    Availability ViewSet
     """
     queryset = Availability.objects.all()
     serializer_class = AvailabilitySerializer
-
-class AvailabilityDetail(generics.RetrieveUpdateDestroyAPIView):
-    """
-    API endpoint that allows an availability to be retrieved, updated, or deleted.
-    """
-    queryset = Availability.objects.all()
-    serializer_class = AvailabilitySerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]

@@ -68,7 +68,7 @@ class Availability(models.Model):
     objects = models.Manager()
 
     def __str__(self):
-        return f"{self.professional}'s Availability on {self.get_day_of_week_display()}"
+        return f"{self.professional}'s Availability on {self.day_of_week}"
 
 class Appointment(models.Model):
     """
