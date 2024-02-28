@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import Professional from "../assets/professional.png";
-import { Button } from "../components/Button";
+import { Button } from "../Components/Button";
 export function WelcomeBanner() {
   return (
     <div>
@@ -15,7 +16,7 @@ export function WelcomeBanner() {
             eros sed dolor consectetur, at imperdiet odio mollis. Phasellus a
             dui pharetra, sagittis ex quis.
           </p>
-          <Button className="font-bold w-max">Register</Button>
+          <Button className="font-bold w-max"><Link to="/register">Register</Link></Button>
         </div>
         <div className="w-2/4 pt-20">
           <img src={Professional} />
