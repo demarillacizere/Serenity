@@ -15,11 +15,11 @@ export function Navbar() {
           </Link>
         </a>
       </div>
-      <div className="flex flex-grow md:gap-2 max-w-[600px] ">
-        <a>Home</a>
-        <a>About Us</a>
-        <a>Our Services</a>
-        <a>Self-Help Resources</a>
+      <div className="flex flex-grow md:gap-4 max-w-[600px] ">
+      <Link to="/" className="font-semibold text-gray-600 hover:text-gray400 transition duration-300 antialiased">Home</Link>
+        <Link to="/about" className="font-semibold text-gray-600 hover:text-gray400 transition duration-300 antialiased">About</Link>
+        <Link to="/resources" className="font-semibold text-gray-600 hover:text-gray400 transition duration-300 antialiased">Services</Link>
+        <Link to="/resources" className="font-semibold text-gray-600 hover:text-gray400 transition duration-300 antialiased">Explore Resources</Link>
       </div>
       <div className="flex flex-shrink-0 md:gap-2">
         <Button><Link to="/login">Login</Link></Button>

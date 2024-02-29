@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 
 import { useForm } from "react-hook-form";
 import { Button } from "../Components/Button";
+import { Link } from "react-router-dom";
 
 type Props = {};
 
@@ -34,7 +35,7 @@ const LoginPage = (props: Props) => {
         <div className="w-full bg-white rounded-lg shadow dark:border md:mb-20 sm:max-w-md xl:p-0  ">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1 className="text-xl font-bold leading-tight tracking-tight  md:text-2xl ">
-              Sign in to your account now
+              Welcome Back
             </h1>
             <form
               className="space-y-4 md:space-y-6"
@@ -96,12 +97,7 @@ const LoginPage = (props: Props) => {
               </Button>
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                 Don’t have an account yet?{" "}
-                <a
-                  href="#"
-                  className="font-medium text-primary-600 hover:underline dark:text-primary-500"
-                >
-                  Sign up
-                </a>
+                <Link to='/register' className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign Up</Link>
               </p>
             </form>
           </div>
