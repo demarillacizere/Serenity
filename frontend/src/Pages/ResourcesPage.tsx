@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 type Props = {}
 
-const ResourcesPage: React.FC<Props> = () => {
+const ResourcesPage = (props: Props) =>  {
   // Sample self-help resources data with images
   const selfHelpResources = [
     {

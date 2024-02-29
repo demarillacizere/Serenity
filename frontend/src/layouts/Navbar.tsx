@@ -4,6 +4,7 @@ import Login from "../Pages/LoginPage";
 import { User } from "lucide-react";
 import logo from "../assets/logo_color.png";
 import { Button } from "../Components/Button";
+import LanguageSwitcher from "../Components/LanguageSwitcher";
 export function Navbar() {
   return (
     <div className="flex gap-10 lg:gap-20 justify-between pt-5 mb-6 mx-14 px-14">
@@ -11,7 +12,8 @@ export function Navbar() {
         <button></button>
         <a href="/">
           <Link to="/">
-            <img src={logo} className="h-[65px] w-[160px] " />
+            <h3 className="text-3xl font-bold text-gray-700">Serenity</h3>
+            {/* <img src={logo} className=" w-3/4 " /> */}
           </Link>
         </a>
       </div>
@@ -23,10 +25,11 @@ export function Navbar() {
       </div>
       <div className="flex flex-shrink-0 md:gap-2">
         <Button><Link to="/login">Login</Link></Button>
-        <Button size="icon" variant="ghost">
+        {/* <Button size="icon" variant="ghost">
           {" "}
           <User />{" "}
-        </Button>
+        </Button> */}
+        <LanguageSwitcher></LanguageSwitcher>
       </div>
     </div>
   );
