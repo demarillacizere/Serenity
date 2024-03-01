@@ -5,18 +5,16 @@ export function WelcomeBanner() {
   return (
     <div>
       <div className="flex gap-20 lg:gap-20 justify-between pt-5 mb-6 mx-14 px-14">
-        <div className="w-2/5 flex flex-col gap-10 pt-10">
-          <h2 className="text-5xl font-semibold antialiased tracking-wide">
-            Healthy Minds, Happy Lives
-            <span className="text-primary-orange"> Mental Health </span>
-            Consultancy
+        <div className="w-2/6 flex flex-col gap-10 pt-10">
+          <h2 className="text-4xl font-semibold antialiased tracking-wide mt-5 text-gray-800">
+            Healthy Minds, Happy Lives <br/>Welcome to our
+            <span className="text-primary-orange"> Mental Wellness </span>
+            Community
           </h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet
-            eros sed dolor consectetur, at imperdiet odio mollis. Phasellus a
-            dui pharetra, sagittis ex quis.
+          Whether you're seeking professional therapy, connecting with peers in our supportive community, or exploring self-help resources, we're here to empower you on your journey to mental well-being
           </p>
-          <Button className="font-bold w-max"><Link to="/register">Register</Link></Button>
+          <Button className="font-bold w-max"><Link to="/register">Get Started</Link></Button>
         </div>
         <div className="w-2/4 pt-20">
           <img src={Professional} />

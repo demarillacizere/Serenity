@@ -1,8 +1,16 @@
 import React from "react";
 import profilePicture from "../assets/professional.png"; // Import the profile picture
 import { Link } from "react-router-dom";
-import { ClipboardCheck, ClipboardCopy, CircleDollarSign, Settings } from 'lucide-react';
+import {
+  ClipboardCheck,
+  ClipboardCopy,
+  CircleDollarSign,
+  Settings,
+  CheckCircle2,
+  Clock4,
+} from "lucide-react";
 import { MessagesSquare, User } from "lucide-react";
+import Logo from "../assets/logo_white.png";
 
 const ProfessionalDashboardPage = () => {
   // Sample data for past appointments
@@ -25,13 +33,13 @@ const ProfessionalDashboardPage = () => {
   ];
 
   return (
-    <div className=" flex w-full mt-3">
+    <div className="flex justify-between w-full rounded-sm bg-gray-700">
       <button
         data-drawer-target="separator-sidebar"
         data-drawer-toggle="separator-sidebar"
         aria-controls="separator-sidebar"
         type="button"
-        className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        className="inline-flex items-center p-3 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
       >
         <span className="sr-only">Open sidebar</span>
         <svg
@@ -54,15 +62,17 @@ const ProfessionalDashboardPage = () => {
         className=" z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
         aria-label="Sidebar"
       >
-        <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-          <ul className="space-y-2 font-medium">
+        <div className="h-full px-3 py-4 overflow-y-auto  text-white p-3">
+          <h3 className="text-3xl py-5 px-2 font-bold pb-8">Serenity</h3>
+          <h3 className="text-xs py-2 px-2">MAIN MENU</h3>
+          <ul className="space-y-2 font-medium text-sm">
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="flex items-center p-3 hover:text-gray-900 rounded-lg text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg
-                  className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                  className="w-5 h-5  transition duration-75xt-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -77,22 +87,26 @@ const ProfessionalDashboardPage = () => {
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="flex items-center p-3 hover:text-gray-900 rounded-lg text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <ClipboardCheck />
-                <span className="flex-1 ms-3 whitespace-nowrap">Appointments</span>
+                <span className="flex-1 ms-3 whitespace-nowrap">
+                  Appointments
+                </span>
                 <span className="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
-                  3
+                  23
                 </span>
               </a>
             </li>
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="flex items-center p-3 hover:text-gray-900 rounded-lg text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <ClipboardCopy />
-                <span className="flex-1 ms-3 whitespace-nowrap">Past Appointments</span>
+                <span className="flex-1 ms-3 whitespace-nowrap">
+                  Past Appointments
+                </span>
                 <span className="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
                   3
                 </span>
@@ -101,9 +115,11 @@ const ProfessionalDashboardPage = () => {
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="flex items-center p-3 hover:text-gray-900 rounded-lg text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
-                <span><MessagesSquare /></span>
+                <span>
+                  <MessagesSquare />
+                </span>
                 <span className="flex-1 ms-3 whitespace-nowrap">Messages</span>
                 <span className="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
                   3
@@ -113,10 +129,10 @@ const ProfessionalDashboardPage = () => {
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="flex items-center p-3 hover:text-gray-900 rounded-lg text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg
-                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                  className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -127,13 +143,16 @@ const ProfessionalDashboardPage = () => {
                 <span className="flex-1 ms-3 whitespace-nowrap">Clients</span>
               </a>
             </li>
+          </ul>
+          <ul className="pt-4 mt-4 space-y-2 font-medium text-sm  dark:border-gray-700">
+            <h3 className="text-xs px-2">OTHER MENU</h3>
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="flex items-center p-3 hover:text-gray-900 rounded-lg text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg
-                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                  className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -149,39 +168,40 @@ const ProfessionalDashboardPage = () => {
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
+                className="flex items-center p-3 hover:text-gray-900 rounded-lg text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <CircleDollarSign />
                 <span className="ms-3">Payments</span>
               </a>
             </li>
           </ul>
-          <ul className="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
+          <ul className="pt-4 mt-4 space-y-2 font-medium text-sm  dark:border-gray-700">
+            <h3 className="text-xs px-2">HELP & SETTINGS</h3>
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
+                className="flex items-center p-3 hover:text-gray-900 rounded-lg text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
-                <User/>
+                <User />
                 <span className="ms-3">Profile</span>
               </a>
             </li>
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
+                className="flex items-center p-3 hover:text-gray-900 rounded-lg text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
-                <Settings/>
+                <Settings />
                 <span className="ms-3">Settings</span>
               </a>
             </li>
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
+                className="flex items-center p-3 hover:text-gray-900 rounded-lg text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg
-                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                  className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -196,68 +216,408 @@ const ProfessionalDashboardPage = () => {
         </div>
       </aside>
 
-      <div className="p-4 ">
-        <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
-          <div className="grid grid-cols-2 gap-4 mb-4">
-            <div className=" h-24 p-5 rounded bg-orange-200 dark:bg-gray-800">
-              <p className="text-2xl "> Welcome Back Dr Louise</p>
-              <p className=" "> You have 4 appointments today</p>
-            </div>
-
-            <div className="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-              <p className="text-2xl text-gray-400 dark:text-gray-500">hi</p>
-            </div>
-          </div>
-          <div className="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-            <p className="text-2xl text-gray-400 dark:text-gray-500">
-              Current Appointments
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-4 mb-4">
-            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p className="text-2xl text-gray-400 dark:text-gray-500">hi</p>
-            </div>
-            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p className="text-2xl text-gray-400 dark:text-gray-500">hi</p>
-            </div>
-            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p className="text-2xl text-gray-400 dark:text-gray-500">
+      <div className="p-4 flex-grow">
+        <div className="p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700 bg-gray-100 w-full">
+          <h3 className="flex items-center py-3 gap-3 hover:text-gray-900 rounded-lg border-b">
+            <svg
+              className="w-5 h-5  transition duration-75xt-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 21"
+            >
+              <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
+              <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
+            </svg>
+            Dashboard
+          </h3>
+          <h4 className="py-4 font-medium bg-white rounded mb-4 w-max px-4 my-4">
+            Welcome Back Dr. Louise
+          </h4>
+          <div className="grid grid-cols-4 gap-4 mb-4">
+            <div className="rounded p-6 bg-white">
+              <div className="card-header font-semibold flex items-center gap-3">
                 <svg
-                  className="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
+                  fill="#5170cd"
+                  version="1.1"
+                  id="Capa_1"
+                  width="28px"
+                  height="28px"
+                  viewBox="0 0 610.398 610.398"
                 >
-                  <path
-                    stroke="currentColor"
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
+                    stroke="#CCCCCC"
+                    stroke-width="2.441592"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    {" "}
+                    <g>
+                      {" "}
+                      <g>
+                        {" "}
+                        <path d="M159.567,0h-15.329c-1.956,0-3.811,0.411-5.608,0.995c-8.979,2.912-15.616,12.498-15.616,23.997v10.552v27.009v14.052 c0,2.611,0.435,5.078,1.066,7.44c2.702,10.146,10.653,17.552,20.158,17.552h15.329c11.724,0,21.224-11.188,21.224-24.992V62.553 V35.544V24.992C180.791,11.188,171.291,0,159.567,0z"></path>{" "}
+                        <path d="M461.288,0h-15.329c-11.724,0-21.224,11.188-21.224,24.992v10.552v27.009v14.052c0,13.804,9.5,24.992,21.224,24.992 h15.329c11.724,0,21.224-11.188,21.224-24.992V62.553V35.544V24.992C482.507,11.188,473.007,0,461.288,0z"></path>{" "}
+                        <path d="M539.586,62.553h-37.954v14.052c0,24.327-18.102,44.117-40.349,44.117h-15.329c-22.247,0-40.349-19.79-40.349-44.117 V62.553H199.916v14.052c0,24.327-18.102,44.117-40.349,44.117h-15.329c-22.248,0-40.349-19.79-40.349-44.117V62.553H70.818 c-21.066,0-38.15,16.017-38.15,35.764v476.318c0,19.784,17.083,35.764,38.15,35.764h468.763c21.085,0,38.149-15.984,38.149-35.764 V98.322C577.735,78.575,560.671,62.553,539.586,62.553z M527.757,557.9l-446.502-0.172V173.717h446.502V557.9z"></path>{" "}
+                        <path d="M353.017,266.258h117.428c10.193,0,18.437-10.179,18.437-22.759s-8.248-22.759-18.437-22.759H353.017 c-10.193,0-18.437,10.179-18.437,22.759C334.58,256.074,342.823,266.258,353.017,266.258z"></path>{" "}
+                        <path d="M353.017,348.467h117.428c10.193,0,18.437-10.179,18.437-22.759c0-12.579-8.248-22.758-18.437-22.758H353.017 c-10.193,0-18.437,10.179-18.437,22.758C334.58,338.288,342.823,348.467,353.017,348.467z"></path>{" "}
+                        <path d="M353.017,430.676h117.428c10.193,0,18.437-10.18,18.437-22.759s-8.248-22.759-18.437-22.759H353.017 c-10.193,0-18.437,10.18-18.437,22.759S342.823,430.676,353.017,430.676z"></path>{" "}
+                        <path d="M353.017,512.89h117.428c10.193,0,18.437-10.18,18.437-22.759c0-12.58-8.248-22.759-18.437-22.759H353.017 c-10.193,0-18.437,10.179-18.437,22.759C334.58,502.71,342.823,512.89,353.017,512.89z"></path>{" "}
+                        <path d="M145.032,266.258H262.46c10.193,0,18.436-10.179,18.436-22.759s-8.248-22.759-18.436-22.759H145.032 c-10.194,0-18.437,10.179-18.437,22.759C126.596,256.074,134.838,266.258,145.032,266.258z"></path>{" "}
+                        <path d="M145.032,348.467H262.46c10.193,0,18.436-10.179,18.436-22.759c0-12.579-8.248-22.758-18.436-22.758H145.032 c-10.194,0-18.437,10.179-18.437,22.758C126.596,338.288,134.838,348.467,145.032,348.467z"></path>{" "}
+                        <path d="M145.032,430.676H262.46c10.193,0,18.436-10.18,18.436-22.759s-8.248-22.759-18.436-22.759H145.032 c-10.194,0-18.437,10.18-18.437,22.759S134.838,430.676,145.032,430.676z"></path>{" "}
+                        <path d="M145.032,512.89H262.46c10.193,0,18.436-10.18,18.436-22.759c0-12.58-8.248-22.759-18.436-22.759H145.032 c-10.194,0-18.437,10.179-18.437,22.759C126.596,502.71,134.838,512.89,145.032,512.89z"></path>{" "}
+                      </g>{" "}
+                    </g>{" "}
+                  </g>
                 </svg>
-              </p>
+                <div>Appointments</div>
+              </div>
+              <div className="border-t mt-5 py-5">
+                <span className="font-semibold text-3xl">35</span>
+                <br />
+                <span className="text-gray-400">Appointments</span>
+              </div>
             </div>
-            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p className="text-2xl text-gray-400 dark:text-gray-500">hi</p>
+            <div className="rounded p-6 bg-white">
+              <div className="flex items-center gap-3 font-semibold">
+                <svg
+                  fill="#ea6d2a"
+                  version="1.1"
+                  id="Capa_1"
+                  width="28px"
+                  height="28px"
+                  viewBox="0 0 45.902 45.902"
+                  stroke="#ea6d2a"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    {" "}
+                    <g>
+                      {" "}
+                      <g>
+                        {" "}
+                        <path d="M43.162,26.681c-1.564-1.578-3.631-2.539-5.825-2.742c1.894-1.704,3.089-4.164,3.089-6.912 c0-5.141-4.166-9.307-9.308-9.307c-4.911,0-8.932,3.804-9.281,8.625c4.369,1.89,7.435,6.244,7.435,11.299 c0,1.846-0.42,3.65-1.201,5.287c1.125,0.588,2.162,1.348,3.066,2.26c2.318,2.334,3.635,5.561,3.61,8.851l-0.002,0.067 l-0.002,0.057l-0.082,1.557h11.149l0.092-12.33C45.921,30.878,44.936,28.466,43.162,26.681z"></path>{" "}
+                        <path d="M23.184,34.558c1.893-1.703,3.092-4.164,3.092-6.912c0-5.142-4.168-9.309-9.309-9.309c-5.142,0-9.309,4.167-9.309,9.309 c0,2.743,1.194,5.202,3.084,6.906c-4.84,0.375-8.663,4.383-8.698,9.318l-0.092,1.853h14.153h15.553l0.092-1.714 c0.018-2.514-0.968-4.926-2.741-6.711C27.443,35.719,25.377,34.761,23.184,34.558z"></path>{" "}
+                        <path d="M6.004,11.374v3.458c0,1.432,1.164,2.595,2.597,2.595c1.435,0,2.597-1.163,2.597-2.595v-3.458h3.454 c1.433,0,2.596-1.164,2.596-2.597c0-1.432-1.163-2.596-2.596-2.596h-3.454V2.774c0-1.433-1.162-2.595-2.597-2.595 c-1.433,0-2.597,1.162-2.597,2.595V6.18H2.596C1.161,6.18,0,7.344,0,8.776c0,1.433,1.161,2.597,2.596,2.597H6.004z"></path>{" "}
+                      </g>{" "}
+                    </g>{" "}
+                  </g>
+                </svg>
+                <div>New Clients</div>
+              </div>
+              <div className="border-t mt-5 py-5">
+                <span className="font-semibold text-3xl">20</span>
+
+                <br />
+                <span className="text-gray-400">New Clients</span>
+              </div>
+            </div>
+            <div className="rounded p-6 bg-white">
+              <div className="flex items-center gap-3 font-semibold">
+                <svg
+                  width="28px"
+                  height="28px"
+                  viewBox="0 0 24 24"
+                  fill="#f0c528"
+                  stroke="#f0c528"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    {" "}
+                    <g>
+                      {" "}
+                      <path fill="none" d="M0 0H24V24H0z"></path>{" "}
+                      <path d="M21 3c.552 0 1 .448 1 1v14c0 .552-.448 1-1 1H6.455L2 22.5V4c0-.552.448-1 1-1h18zm-1 2H4v13.385L5.763 17H20V5zm-3 2v8h-2V7h2zm-6 1v1.999L13 10v2l-2-.001V14H9v-2.001L7 12v-2l2-.001V8h2z"></path>{" "}
+                    </g>{" "}
+                  </g>
+                </svg>
+                <div>Follow-Up Clients</div>
+              </div>
+              <div className="border-t mt-5 py-5">
+                <span className="font-semibold text-3xl">16</span>
+                <br />
+                <span className="text-gray-400">Follow-Up Clients</span>
+              </div>
+            </div>
+            <div className="rounded p-6 bg-white">
+              <div className="flex items-center gap-3 font-semibold">
+                <svg
+                  width="28px"
+                  height="28px"
+                  viewBox="0 0 16 16"
+                  fill="#3da03b"
+                  stroke="#3da03b"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="#CCCCCC"
+                    stroke-width="0.032"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    {" "}
+                    <path
+                      fill="#000000"
+                      fill-rule="evenodd"
+                      d="M8,0 C8.55228,0 9,0.447715 9,1 L11,1 L11,2 L13,2 C13.5523,2 14,2.44772 14,3 L14,15 C14,15.5523 13.5523,16 13,16 L3,16 C2.44772,16 2,15.5523 2,15 L2,3 C2,2.44772 2.44772,2 3,2 L5,2 L5,1 L7,1 C7,0.447715 7.44772,0 8,0 Z M5,4 L4,4 L4,14 L12,14 L12,4 L11,4 L11,5 L5,5 L5,4 Z M6,10 L10,10 C10.5523,10 11,10.4477 11,11 C11,11.51285 10.613973,11.9355092 10.1166239,11.9932725 L10,12 L6,12 C5.44772,12 5,11.5523 5,11 C5,10.48715 5.38604429,10.0644908 5.88337975,10.0067275 L6,10 Z M10,7 C10.5523,7 11,7.44772 11,8 C11,8.55228 10.5523,9 10,9 L6,9 C5.44772,9 5,8.55228 5,8 C5,7.44772 5.44772,7 6,7 L10,7 Z M8,2 C7.44772,2 7,2.44772 7,3 C7,3.55228 7.44772,4 8,4 C8.55228,4 9,3.55228 9,3 C9,2.44772 8.55228,2 8,2 Z"
+                    ></path>{" "}
+                  </g>
+                </svg>
+                <div></div>Review Reports
+              </div>
+              <div className="border-t mt-5 py-5">
+                <span className="font-semibold text-3xl">18</span>
+                <br />
+                <span className="text-gray-400">Reviews</span>
+              </div>
             </div>
           </div>
-          <div className="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-            <p className="text-2xl text-gray-400 dark:text-gray-500">hi</p>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p className="text-2xl text-gray-400 dark:text-gray-500">hi</p>
+
+          <div className="grid grid-cols-2 gap-4 mb-4">
+            <div className="rounded bg-white">
+              <div className="bg-indigo-50  p-6 border-b flex justify-between">
+                <h3 className="font-semibold">Today's Appointments</h3>
+                <Link className="text-blue-500 hover:underline" to="/">
+                  View All
+                </Link>
+              </div>
+              <div className="rounded p-6 ">
+                <ol className="relative border-s border-gray-300 dark:border-gray-700 ml-10">
+                  <li className="mb-10 ms-4">
+                    <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500 ml-[-60px] pr-3">
+                      9 am
+                    </time>
+                    <div className="flex mt-[-25px] justify-between">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white ">
+                        Rolande Anne Uwase
+                      </h3>
+                      <CheckCircle2 className="text-green-700" />
+                    </div>
+
+                    <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+                      Consultation
+                    </p>
+                  </li>
+                  <li className="mb-10 ms-4">
+                    <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500 ml-[-60px] pr-3">
+                      11 am
+                    </time>
+                    <div className="flex mt-[-25px] justify-between">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white ">
+                        Jack Bauer
+                      </h3>
+                      <CheckCircle2 className="text-green-700" />
+                    </div>
+
+                    <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+                      Stress Management, Social Anxiety
+                    </p>
+                  </li>
+                  <li className="mb-10 ms-4">
+                    <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500 ml-[-60px] pr-3">
+                      12 pm
+                    </time>
+                    <div className="flex mt-[-25px] justify-between">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white ">
+                        Peter Krang
+                      </h3>
+                      <Clock4 className="text-blue-700" />
+                    </div>
+
+                    <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+                      Follow Up
+                    </p>
+                  </li>
+                  <li className="mb-10 ms-4">
+                    <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500 ml-[-60px] pr-3">
+                      14 pm
+                    </time>
+                    <div className="flex mt-[-25px] justify-between">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white ">
+                        Yeremiya Butera
+                      </h3>
+                      <Clock4 className="text-blue-700" />
+                    </div>
+                    <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+                      Follow Up
+                    </p>
+                  </li>
+                  <li className="mb-10 ms-4">
+                    <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500 ml-[-60px] pr-3">
+                      15 pm
+                    </time>
+                    <div className="flex mt-[-25px] justify-between">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white ">
+                        Ange Bwiza
+                      </h3>
+                      <Clock4 className="text-blue-700" />
+                    </div>
+                    <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+                      Anxiety
+                    </p>
+                  </li>
+                </ol>
+              </div>
             </div>
-            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p className="text-2xl text-gray-400 dark:text-gray-500">hi</p>
-            </div>
-            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p className="text-2xl text-gray-400 dark:text-gray-500">hi</p>
-            </div>
-            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p className="text-2xl text-gray-400 dark:text-gray-500">hi</p>
+            <div className=" rounded bg-gray-50 h-28 dark:bg-gray-800">
+              <div className="bg-indigo-50  p-6 border-b flex justify-between">
+                <h3 className="font-bold">
+                  New Appointments <span className="text-blue-500">(5)</span>
+                </h3>
+                <Link className="text-blue-500 hover:underline" to="/">
+                  View All
+                </Link>
+              </div>
+
+              <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+                <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                  <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                      <th scope="col" className="px-6 py-3">
+                        Client Name
+                      </th>
+                      <th scope="col" className="px-6 py-3">
+                        Date
+                      </th>
+                      <th scope="col" className="px-6 py-3">
+                        Start
+                      </th>
+                      <th scope="col" className="px-6 py-3">
+                        End
+                      </th>
+                      <th scope="col" className="px-6 py-3">
+                        Mode
+                      </th>
+                      <th scope="col" className="px-6 py-3">
+                        <span className="sr-only">View</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                      <th
+                        scope="row"
+                        className="px-6 py-4 font-medium text-gray-900 dark:text-white"
+                      >
+                        Judith Niyonsenga
+                      </th>
+                      <td className="px-6 py-4">26/03/2023</td>
+                      <td className="px-6 py-4">15:00</td>
+                      <td className="px-6 py-4">15:30</td>
+                      <td className="px-6 py-4">Virtual</td>
+                      <td className="px-6 py-4 text-right">
+                        <a
+                          href="#"
+                          className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                        >
+                          View
+                        </a>
+                      </td>
+                    </tr>
+                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                      <th
+                        scope="row"
+                        className="px-6 py-4 font-medium text-gray-900  dark:text-white"
+                      >
+                        Claude Max
+                      </th>
+                      <td className="px-6 py-4">19/02/2024</td>
+                      <td className="px-6 py-4">12:30</td>
+                      <td className="px-6 py-4">13:10</td>
+                      <td className="px-6 py-4">In-Person</td>
+                      <td className="px-6 py-4 text-right">
+                        <a
+                          href="#"
+                          className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                        >
+                          View
+                        </a>
+                      </td>
+                    </tr>
+                    <tr className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                      <th
+                        scope="row"
+                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                      >
+                        Magic Sam
+                      </th>
+                      <td className="px-6 py-4">02/03/2024</td>
+                      <td className="px-6 py-4">09:45</td>
+                      <td className="px-6 py-4">10:45</td>
+                      <td className="px-6 py-4">In-Person</td>
+                      <td className="px-6 py-4 text-right">
+                        <a
+                          href="#"
+                          className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                        >
+                          View
+                        </a>
+                      </td>
+                    </tr>
+                    <tr className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                      <th
+                        scope="row"
+                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                      >
+                        Uwase Karen
+                      </th>
+                      <td className="px-6 py-4">02/03/2024</td>
+                      <td className="px-6 py-4">09:45</td>
+                      <td className="px-6 py-4">10:45</td>
+                      <td className="px-6 py-4">In-Person</td>
+                      <td className="px-6 py-4 text-right">
+                        <a
+                          href="#"
+                          className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                        >
+                          View
+                        </a>
+                      </td>
+                    </tr>
+                    <tr className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                      <th
+                        scope="row"
+                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                      >
+                        Galileon Musoni
+                      </th>
+                      <td className="px-6 py-4">02/03/2024</td>
+                      <td className="px-6 py-4">09:45</td>
+                      <td className="px-6 py-4">10:45</td>
+                      <td className="px-6 py-4">Virtual</td>
+                      <td className="px-6 py-4 text-right">
+                        <a
+                          href="#"
+                          className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                        >
+                          View
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>

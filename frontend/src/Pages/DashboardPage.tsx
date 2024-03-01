@@ -1,6 +1,7 @@
 import React from "react";
 import profilePicture from "../assets/professional.png"; // Import the profile picture
 import { Link } from "react-router-dom";
+import Logo from "../assets/logo_white.png"
 
 const ProfessionalDashboardPage = () => {
   // Sample data for past appointments
@@ -26,10 +27,11 @@ const ProfessionalDashboardPage = () => {
     <div className="w-full flex gap-10 mt-10">
       <div className="">
         <aside
-          className="  z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+          className="  bg-gray-700 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
           aria-label="Sidebar"
         >
           <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 ">
+          <img src={Logo} className="w-2/5"/>
             <ul className="space-y-2 font-medium">
               <li>
                 <a

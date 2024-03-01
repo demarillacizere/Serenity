@@ -28,7 +28,7 @@ const LanguageSwitcher: React.FC = () => {
     <div className="relative">
       <Button
         variant={"nobg"}
-        className="flex items-center space-x-1 text-gray-900  px-2 py-1 rounded-md focus:outline-none"
+        className="flex items-center space-x-1 text-gray-900  px-2 py-1  focus:outline-none"
         aria-label="Select language"
         onClick={toggleDropdown}
       >
