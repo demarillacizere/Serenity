@@ -5,6 +5,8 @@ import HomePage from "../Pages/HomePage";
 import RegisterPage from "../Pages/RegisterPage";
 import AboutUs from "../Pages/AboutUsPage";
 import Resources from "../Pages/ResourcesPage";
+import Chat from "../Pages/CommunityHubPage";
+import Professional from "../Pages/ProfessionalDashboardPage";
 import App from "../App";
 
 export const router = createBrowserRouter([
@@ -16,6 +18,8 @@ export const router = createBrowserRouter([
       { path: "login", element: <LoginPage /> },
       { path: "register", element: <RegisterPage /> },
       { path: "resources", element: <Resources /> },
+      { path: "chat-corner", element: <Chat /> },
+      { path: "professional", element: <Professional /> },
     ],
   },
 ]);

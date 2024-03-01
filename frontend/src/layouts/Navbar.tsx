@@ -20,8 +20,9 @@ export function Navbar() {
       <div className="flex flex-grow md:gap-4 max-w-[600px] ">
       <Link to="/" className="font-semibold text-gray-600 hover:text-gray400 transition duration-300 antialiased">Home</Link>
         <Link to="/about" className="font-semibold text-gray-600 hover:text-gray400 transition duration-300 antialiased">About</Link>
-        <Link to="/resources" className="font-semibold text-gray-600 hover:text-gray400 transition duration-300 antialiased">Services</Link>
-        <Link to="/resources" className="font-semibold text-gray-600 hover:text-gray400 transition duration-300 antialiased">Explore Resources</Link>
+        <Link to="/resources" className="font-semibold text-gray-600 hover:text-gray400 transition duration-300 antialiased">Resources</Link>
+        <Link to="/chat-corner" className="font-semibold text-gray-600 hover:text-gray400 transition duration-300 antialiased">Chat Corner</Link>
+
       </div>
       <div className="flex flex-shrink-0 md:gap-2">
         <Button><Link to="/login">Login</Link></Button>
