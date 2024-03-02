@@ -6,8 +6,7 @@ import uk from "../assets/united-kingdom.png";
 
 const LanguageSwitcher: React.FC = () => {
   // Initialize state for the selected language with default value 'English'
-  const [selectedLanguage, setSelectedLanguage] =
-    useState<string>("Language");
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("Language");
   // State to track whether the dropdown is open or closed
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -28,7 +27,7 @@ const LanguageSwitcher: React.FC = () => {
     <div className="relative">
       <Button
         variant={"nobg"}
-        className="flex items-center space-x-1 text-gray-900  px-2 py-1  focus:outline-none"
+        className="flex items-center space-x-1 text-gray-700  px-2 py-1 h-8"
         aria-label="Select language"
         onClick={toggleDropdown}
       >

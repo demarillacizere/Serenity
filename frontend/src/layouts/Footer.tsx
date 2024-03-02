@@ -8,7 +8,8 @@ export function Footer() {
   return (
     <div className="bg-gradient-to-r from-primary-gradient-start to-primary-gradient-end ... p-5 text-white flex justify-around flex-shrink text-lg mt-5">
       <div className="flex-col p-5">
-        <img src={Logo} className="w-2/5"/>
+        {/* <img src={Logo} className="w-2/5"/> */}
+        <h3 className="text-3xl font-semibold text-white">Serenity</h3>
         <p className="mt-4 text-sm">
           Vestibulum consectetur mi sed ligula efficitur consequat.
         </p>

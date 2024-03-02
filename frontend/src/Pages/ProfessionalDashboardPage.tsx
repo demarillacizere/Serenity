@@ -216,7 +216,7 @@ const ProfessionalDashboardPage = () => {
         </div>
       </aside>
 
-      <div className="p-4 flex-grow">
+      <div className="p-4 flex-grow text-gray-700">
         <div className="p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700 bg-gray-100 w-full">
           <h3 className="flex items-center py-3 gap-3 hover:text-gray-900 rounded-lg border-b">
             <svg
@@ -482,7 +482,7 @@ const ProfessionalDashboardPage = () => {
             </div>
             <div className=" rounded bg-gray-50 h-28 dark:bg-gray-800">
               <div className="bg-indigo-50  p-6 border-b flex justify-between">
-                <h3 className="font-bold">
+                <h3 className="font-semibold">
                   New Appointments <span className="text-blue-500">(5)</span>
                 </h3>
                 <Link className="text-blue-500 hover:underline" to="/">

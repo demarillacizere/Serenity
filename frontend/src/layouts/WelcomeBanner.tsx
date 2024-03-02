@@ -5,16 +5,31 @@ export function WelcomeBanner() {
   return (
     <div>
       <div className="flex gap-20 lg:gap-20 justify-between pt-5 mb-6 mx-14 px-14">
-        <div className="w-2/6 flex flex-col gap-10 pt-10">
-          <h2 className="text-4xl font-semibold antialiased tracking-wide mt-5 text-gray-800">
-            Healthy Minds, Happy Lives <br/>Welcome to our
-            <span className="text-primary-orange"> Mental Wellness </span>
+        <div className="w-3/6 flex flex-col gap-10 pt-20 mt-10">
+          <h2 className="text-6xl font-semibold antialiased tracking-normal mt-5 text-gray-800 space-">
+            Welcome to our<br></br>
+            <span className="text-primary-orange inline-block py-2">
+              {" "}
+              Mental Wellness{" "}
+            </span>
             Community
           </h2>
           <p>
-          Whether you're seeking professional therapy, connecting with peers in our supportive community, or exploring self-help resources, we're here to empower you on your journey to mental well-being
+            Whether you're seeking professional therapy, connecting with peers
+            in our supportive community, or exploring self-help resources, we're
+            here to empower you on your journey to mental well-being
           </p>
-          <Button className="font-bold w-max"><Link to="/register">Get Started</Link></Button>
+          <div className="flex gap-3 font-semibold">
+            <Button className=" w-max">
+              <Link to="/register">Get Started</Link>
+            </Button>
+            <Button
+              variant={"ghost"}
+              className="w-max border bg-white border-primary-orange text-primary-orange"
+            >
+              <Link to="#">Learn More</Link>
+            </Button>
+          </div>
         </div>
         <div className="w-2/4 pt-20">
           <img src={Professional} />

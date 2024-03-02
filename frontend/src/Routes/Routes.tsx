@@ -7,6 +7,7 @@ import AboutUs from "../Pages/AboutUsPage";
 import Resources from "../Pages/ResourcesPage";
 import Chat from "../Pages/CommunityHubPage";
 import Professional from "../Pages/ProfessionalDashboardPage";
+import User from "../Pages/UserDashboardPage";
 import App from "../App";
 
 export const router = createBrowserRouter([
@@ -20,6 +21,7 @@ export const router = createBrowserRouter([
       { path: "resources", element: <Resources /> },
       { path: "chat-corner", element: <Chat /> },
       { path: "professional", element: <Professional /> },
+      { path: "user", element: <User /> },
     ],
   },
 ]);

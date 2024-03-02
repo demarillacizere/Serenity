@@ -1,36 +1,99 @@
-import React from 'react';
-import { Button } from '../Components/Button';
-
+import React from "react";
+import { Button } from "../Components/Button";
+import { Banner2 } from "../Layouts/Banner2";
 const CommunityHubPage = () => {
-    return (
-        <div className="max-w-4xl mx-auto px-4 py-8">
-            {/* Post 1 */}
-            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-                <h2 className="text-xl font-semibold mb-2">Post Title</h2>
-                <p className="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis velit eget urna accumsan vestibulum. Proin feugiat libero sit amet sem sodales placerat.</p>
-                <div className="flex items-center justify-between">
-                    <span className="text-gray-500">Posted by User123</span>
-                    <span className="text-gray-500">2 hours ago</span>
-                </div>
-            </div>
-
-            {/* Comment Section */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-lg font-semibold mb-4">Comments</h3>
-                {/* Individual Comment */}
-                <div className="bg-gray-100 rounded-lg p-4 mb-4">
-                    <p className="text-gray-600">That's inspiring... by User456</p>
-                </div>
-                {/* Add space for new comment */}
-                <textarea className="w-full p-4 border rounded-lg mb-4" placeholder="Add a comment..."></textarea>
-                <Button className=" text-white font-semibold py-2 px-4 rounded">Post Comment</Button>
-            </div>
-
-            {/* Add space for new post */}
-            <textarea className="w-full p-4 border rounded-lg mt-8" placeholder="Write a new post..."></textarea>
-            <Button className=" text-white font-semibold py-2 px-4 rounded mt-4">Post</Button>
+  return (
+    <div className="bg-slate-50">
+      <Banner2 />
+      <div className="w-2/4 container mx-auto px-4 py-8">
+        <div className="mb-4">
+          <input
+            type="text"
+            placeholder="Search topics..."
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+          />
         </div>
-    );
+        {/* Add New Post Button */}
+        <div className="mb-8 flex justify-end">
+          <Button className="  px-4 py-2 rounded-md shadow ">
+            Add New Post
+          </Button>
+        </div>
+        {/* Post List */}
+        <div className="space-y-6">
+          {/* Individual Post */}
+          <div className="bg-white rounded-md p-6 shadow-md">
+            <h2 className="text-lg font-semibold mb-2">My Story</h2>
+            <p className="text-gray-600 mb-2 text-xs">
+              By userxyz - 4 hours ago
+            </p>
+            <p className="text-gray-700 mb-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div className="flex justify-between items-center">
+              <p className="text-blue-500 cursor-pointer">Read More</p>
+              <p className="text-gray-600">5 Comments</p>
+            </div>
+          </div>
+          {/* Individual Post */}
+          <div className="bg-white rounded-md p-6 shadow-md">
+            <h2 className="text-lg font-semibold mb-2">
+              How I Deal With Tough Times
+            </h2>
+            <p className="text-gray-600 mb-2 text-xs">
+              By userxyz - 4 hours ago
+            </p>
+            <p className="text-gray-700 mb-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div className="flex justify-between items-center">
+              <p className="text-blue-500 cursor-pointer">Read More</p>
+              <p className="text-gray-600">5 Comments</p>
+            </div>
+          </div>
+          {/* Individual Post */}
+          <div className="bg-white rounded-md p-6 shadow-md">
+            <h2 className="text-lg font-semibold mb-2">My Story</h2>
+            <p className="text-gray-600 mb-2 text-xs">
+              By userxyz - 4 hours ago
+            </p>
+            <p className="text-gray-700 mb-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div className="flex justify-between items-center">
+              <p className="text-blue-500 cursor-pointer">Read More</p>
+              <p className="text-gray-600">5 Comments</p>
+            </div>
+          </div>
+          {/* Another Post */}
+          <div className="space-y-6">
+            {/* Individual Post */}
+            <div className="bg-white rounded-md p-6 shadow-md">
+              <h2 className="text-lg font-semibold mb-2">
+                Does anyone else relate?
+              </h2>
+              <p className="text-gray-600 mb-2 text-xs">
+                By anonymous - 2 hours ago
+              </p>
+              <p className="text-gray-700 mb-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <div className="flex justify-between items-center">
+                <p className="text-blue-500 cursor-pointer">Read More</p>
+                <p className="text-gray-600">5 Comments</p>
+              </div>
+            </div>
+          </div>
+          {/* More Posts */}
+          {/* Add more posts here */}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default CommunityHubPage;

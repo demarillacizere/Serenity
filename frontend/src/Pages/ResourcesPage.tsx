@@ -1,7 +1,7 @@
 // ResourcesPage.tsx
 
 import React, { useState } from "react";
-
+import { Banner3 } from "../Layouts/Banner3";
 type Props = {};
 
 const ResourcesPage = (props: Props) => {
@@ -69,43 +69,44 @@ const ResourcesPage = (props: Props) => {
   );
 
   return (
-    <div className=" mx-auto px-4 py-8 bg-gray-50">
-        <div className="container">
-      <h1 className="text-3xl font-bold mb-6">Explore self-help Resources</h1>
-      {/* Search box */}
-      <div className="mb-6">
-        <input
-          type="text"
-          placeholder="Search topics..."
-          className="border border-gray-300 rounded-md p-2 w-1/4"
-          value={searchQuery}
-          onChange={handleSearchChange}
-        />
-      </div>
-      {/* Display self-help resources */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {filteredResources.map((resource, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-md p-6">
-            <div className="mb-4">
-              <img
-                src={resource.imageUrl}
-                alt={resource.title}
-                className=" w-full h-[200px] object-cover rounded-md"
-              />
+    <div className=" ">
+      <Banner3 />
+      <div className="container mx-auto px-4 py-8 bg-gray-50">
+        
+        {/* Search box */}
+        <div className="mb-6">
+          <input
+            type="text"
+            placeholder="Search topics..."
+            className="border border-gray-300 rounded-md p-2 w-1/4"
+            value={searchQuery}
+            onChange={handleSearchChange}
+          />
+        </div>
+        {/* Display self-help resources */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {filteredResources.map((resource, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-md p-6">
+              <div className="mb-4">
+                <img
+                  src={resource.imageUrl}
+                  alt={resource.title}
+                  className=" w-full h-[200px] object-cover rounded-md"
+                />
+              </div>
+              <h2 className="text-xl font-semibold mb-2">{resource.title}</h2>
+              <p className="text-gray-700 mb-4">{resource.description}</p>
+              <a
+                href={resource.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-orange hover:underline"
+              >
+                View Resource
+              </a>
             </div>
-            <h2 className="text-xl font-semibold mb-2">{resource.title}</h2>
-            <p className="text-gray-700 mb-4">{resource.description}</p>
-            <a
-              href={resource.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary-orange hover:underline"
-            >
-              View Resource
-            </a>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
       </div>
     </div>
   );
