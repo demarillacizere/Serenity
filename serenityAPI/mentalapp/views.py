@@ -9,7 +9,7 @@ from .serializers import UserSerializer, ProfileSerializer, ProfessionalSerializ
 
 
 @api_view(['GET'])
-def api_root(request, format=None):
+def api_root(request):
     return Response({
         'users': reverse('user-list', request=request, format=format),
         'profiles': reverse('profile-list', request=request, format=format)
